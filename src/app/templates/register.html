@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Register — Notezzz{% endblock %}
+{% block content %}
+  <h2>Create an Account</h2>
+  <form method="POST" action="{{ url_for('register') }}">
+    <input type="text"  name="username" placeholder="Choose a username" required>
+    <input type="password" name="password" placeholder="Choose a password" required>
+    <button type="submit">Register</button>
+  </form>
+  <div class="auth-links">
+    <p>Already have an account?<a href="{{ url_for('login')}}">Login here</a></p>
+  </div>
+{% endblock %}

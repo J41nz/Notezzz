@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Your Notes — Notezzz{% endblock %}
+{% block content %}
+  <h2>Your Notes</h2>
+  <a class="button" href="{{ url_for('create_note') }}">+ New Note</a>
+
+  {% if notes %}
+    {% for note in notes %}
+      <div class="note-card">
+        <p>Note {{ note.id }}</p>
+        <a href="{{ url_for('view_note', Note=note.id) }}">View</a>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>You have no notes yet.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}New Note — Notezzz{% endblock %}
+{% block content %}
+  <h2>Create Note</h2>
+  <form method="POST" action="{{ url_for('create_note') }}">
+    <textarea name="content" placeholder="Write your note here…" required></textarea>
+    <button type="submit">Save</button>
+  </form>
+{% endblock %}

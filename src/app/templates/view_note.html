@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}View Note — Notezzz{% endblock %}
+{% block content %}
+  <h2>Note Detail</h2>
+  <div class="note-card">
+    <p>{{ safe_content | safe }}</p>
+  </div>
+  <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+{% endblock %}
